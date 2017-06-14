@@ -31,51 +31,51 @@ bool check(int flag,int tmp[16][16])
         fflag=1;
     else
         fflag=0;
-    //ÆåÆ×1£ºËÄ×ÓÁ¬Ïß£¬¶Ëµã¶¼ÔÚ
-    for(int i=1; i<=15; ++i) //Ë®Æ½·½Ïò
+    //æ£‹è°±1ï¼šå››å­è¿çº¿ï¼Œç«¯ç‚¹éƒ½åœ¨
+    for(int i=1; i<=15; ++i) //æ°´å¹³æ–¹å‘
         for(int j=1; j<=10; ++j)
         {
             if(tmp[i][j]!=fflag&&tmp[i][j+1]==flag&&tmp[i][j+2]==flag&&tmp[i][j+3]==flag&&tmp[i][j+4]==flag&&tmp[i][j+5]!=fflag)
                 return true;
         }
-    for(int i=1; i<=10; ++i) //´¹Ö±·½Ïò
+    for(int i=1; i<=10; ++i) //å‚ç›´æ–¹å‘
         for(int j=1; j<=15; ++j)
         {
             if(tmp[i][j]!=fflag&&tmp[i+1][j]==flag&&tmp[i+2][j]==flag&&tmp[i+3][j]==flag&&tmp[i+4][j]==flag&&tmp[i+5][j]!=fflag)
                 return true;
         }
-    for(int i=1; i<=10; ++i) //ÕıĞ±·½Ïò
+    for(int i=1; i<=10; ++i) //æ­£æ–œæ–¹å‘
         for(int j=1; j<=10; ++j)
         {
             if(tmp[i][j]!=fflag&&tmp[i+1][j+1]==flag&&tmp[i+2][j+2]==flag&&tmp[i+3][j+3]==flag&&tmp[i+4][j+4]==flag&&tmp[i+5][j+5]!=fflag)
                 return true;
         }
-    for(int i=1; i<=10; ++i) //·´Ğ±·½Ïò
+    for(int i=1; i<=10; ++i) //åæ–œæ–¹å‘
         for(int j=15; j>=6; --j)
         {
             if(tmp[i][j]!=fflag&&tmp[i+1][j-1]==flag&&tmp[i+2][j-2]==flag&&tmp[i+3][j-3]==flag&&tmp[i+4][j-4]==flag&&tmp[i+5][j-5]!=fflag)
                 return true;
         }
-    //ÆåÆ×2£º×î¼òµ¥µÄÎå×Ó³ÉĞÍ
-    for(int i=1; i<=15; ++i) //Ë®Æ½·½Ïò
+    //æ£‹è°±2ï¼šæœ€ç®€å•çš„äº”å­æˆå‹
+    for(int i=1; i<=15; ++i) //æ°´å¹³æ–¹å‘
         for(int j=1; j<=11; ++j)
         {
             if(tmp[i][j]==flag&&tmp[i][j+1]==flag&&tmp[i][j+2]==flag&&tmp[i][j+3]==flag&&tmp[i][j+4]==flag)
                 return true;
         }
-    for(int i=1; i<=11; ++i) //´¹Ö±·½Ïò
+    for(int i=1; i<=11; ++i) //å‚ç›´æ–¹å‘
         for(int j=1; j<=15; ++j)
         {
             if(tmp[i][j]==flag&&tmp[i+1][j]==flag&&tmp[i+2][j]==flag&&tmp[i+3][j]==flag&&tmp[i+4][j]==flag)
                 return true;
         }
-    for(int i=1; i<=11; ++i) //ÕıĞ±·½Ïò
+    for(int i=1; i<=11; ++i) //æ­£æ–œæ–¹å‘
         for(int j=1; j<=11; ++j)
         {
             if(tmp[i][j]==flag&&tmp[i+1][j+1]==flag&&tmp[i+2][j+2]==flag&&tmp[i+3][j+3]==flag&&tmp[i+4][j+4]==flag)
                 return true;
         }
-    for(int i=1; i<=11; ++i) //·´Ğ±·½Ïò
+    for(int i=1; i<=11; ++i) //åæ–œæ–¹å‘
         for(int j=15; j>=5; --j)
         {
             if(tmp[i][j]==flag&&tmp[i+1][j-1]==flag&&tmp[i+2][j-2]==flag&&tmp[i+3][j-3]==flag&&tmp[i+4][j-4]==flag)
@@ -93,8 +93,8 @@ int h(int flag,int A[16][16])
     else
         fflag=1;
     int val=0;
-    //³öÏÖÃ»ÓĞ¶Â×¡µÄÈı×Ó£¬¶Ô¼º·½²»ÀûµÄÆÀ¼ÛÒªºÜ¸ß
-    for(int i=1; i<=15; ++i) //Ë®Æ½·½Ïò
+    //å‡ºç°æ²¡æœ‰å µä½çš„ä¸‰å­ï¼Œå¯¹å·±æ–¹ä¸åˆ©çš„è¯„ä»·è¦å¾ˆé«˜
+    for(int i=1; i<=15; ++i) //æ°´å¹³æ–¹å‘
         for(int j=1; j<=11; ++j)
         {
             if(tmp[i][j]!=flag&&tmp[i][j+1]==fflag&&tmp[i][j+2]==fflag&&tmp[i][j+3]==fflag&&tmp[i][j+4]!=flag)
@@ -102,7 +102,7 @@ int h(int flag,int A[16][16])
             if(tmp[i][j]!=fflag&&tmp[i][j+1]==flag&&tmp[i][j+2]==flag&&tmp[i][j+3]==flag&&tmp[i][j+4]!=fflag)
                 val+= 1000;
         }
-    for(int i=1; i<=11; ++i) //´¹Ö±·½Ïò
+    for(int i=1; i<=11; ++i) //å‚ç›´æ–¹å‘
         for(int j=1; j<=15; ++j)
         {
             if(tmp[i][j]!=flag&&tmp[i+1][j]==fflag&&tmp[i+2][j]==fflag&&tmp[i+3][j]==fflag&&tmp[i+4][j]!=flag)
@@ -110,7 +110,7 @@ int h(int flag,int A[16][16])
             if(tmp[i][j]!=fflag&&tmp[i+1][j]==flag&&tmp[i+2][j]==flag&&tmp[i+3][j]==flag&&tmp[i+4][j]!=fflag)
                 val+= 1000;
         }
-    for(int i=1; i<=11; ++i) //ÕıĞ±·½Ïò
+    for(int i=1; i<=11; ++i) //æ­£æ–œæ–¹å‘
         for(int j=1; j<=11; ++j)
         {
             if(tmp[i][j]!=flag&&tmp[i+1][j+1]==fflag&&tmp[i+2][j+2]==fflag&&tmp[i+3][j+3]==fflag&&tmp[i+4][j+4]!=flag)
@@ -118,7 +118,7 @@ int h(int flag,int A[16][16])
             if(tmp[i][j]!=fflag&&tmp[i+1][j+1]==flag&&tmp[i+2][j+2]==flag&&tmp[i+3][j+3]==flag&&tmp[i+4][j+4]!=fflag)
                 val+= 1000;
         }
-    for(int i=1; i<=11; ++i) //·´Ğ±·½Ïò
+    for(int i=1; i<=11; ++i) //åæ–œæ–¹å‘
         for(int j=15; j>=5; --j)
         {
             if(tmp[i][j]!=flag&&tmp[i+1][j-1]==fflag&&tmp[i+2][j-2]==fflag&&tmp[i+3][j-3]==fflag&&tmp[i+4][j-4]!=flag)
@@ -126,8 +126,8 @@ int h(int flag,int A[16][16])
             if(tmp[i][j]!=fflag&&tmp[i+1][j-1]==flag&&tmp[i+2][j-2]==flag&&tmp[i+3][j-3]==flag&&tmp[i+4][j-4]!=fflag)
                 val+= 1000;
         }
-    //³öÏÖÎ´¶Â×¡µÄÁ½×Ó£¬ÆÀ¼Û´ÎÖ®
-    for(int i=1; i<=15; ++i) //Ë®Æ½·½Ïò
+    //å‡ºç°æœªå µä½çš„ä¸¤å­ï¼Œè¯„ä»·æ¬¡ä¹‹
+    for(int i=1; i<=15; ++i) //æ°´å¹³æ–¹å‘
         for(int j=1; j<=12; ++j)
         {
             if(tmp[i][j]!=flag&&tmp[i][j+1]==fflag&&tmp[i][j+2]==fflag&&tmp[i][j+3]!=flag)
@@ -135,7 +135,7 @@ int h(int flag,int A[16][16])
             if(tmp[i][j]!=fflag&&tmp[i][j+1]==flag&&tmp[i][j+2]==flag&&tmp[i][j+3]!=fflag)
                 val+= 100;
         }
-    for(int i=1; i<=12; ++i) //´¹Ö±·½Ïò
+    for(int i=1; i<=12; ++i) //å‚ç›´æ–¹å‘
         for(int j=1; j<=15; ++j)
         {
             if(tmp[i][j]!=flag&&tmp[i+1][j]==fflag&&tmp[i+2][j]==fflag&&tmp[i+3][j]!=flag)
@@ -143,7 +143,7 @@ int h(int flag,int A[16][16])
             if(tmp[i][j]!=fflag&&tmp[i+1][j]==flag&&tmp[i+2][j]==flag&&tmp[i+3][j]!=fflag)
                 val+= 100;
         }
-    for(int i=1; i<=12; ++i) //ÕıĞ±·½Ïò
+    for(int i=1; i<=12; ++i) //æ­£æ–œæ–¹å‘
         for(int j=1; j<=12; ++j)
         {
             if(tmp[i][j]!=flag&&tmp[i+1][j+1]==fflag&&tmp[i+2][j+2]==fflag&&tmp[i+3][j+3]!=flag)
@@ -151,7 +151,7 @@ int h(int flag,int A[16][16])
             if(tmp[i][j]!=fflag&&tmp[i+1][j+1]==flag&&tmp[i+2][j+2]==flag&&tmp[i+3][j+3]!=fflag)
                 val+= 100;
         }
-    for(int i=1; i<=12; ++i) //·´Ğ±·½Ïò
+    for(int i=1; i<=12; ++i) //åæ–œæ–¹å‘
         for(int j=15; j>=4; --j)
         {
             if(tmp[i][j]!=flag&&tmp[i+1][j-1]==fflag&&tmp[i+2][j-2]==fflag&&tmp[i+3][j-3]!=flag)
@@ -168,19 +168,19 @@ int h(int flag,int A[16][16])
             if(tmp[i][j]==8)
                 tmp[i][j]=flag;
     int sum1=0;
-    for(int i=1; i<=15; ++i) //Ë®Æ½·½Ïò
+    for(int i=1; i<=15; ++i) //æ°´å¹³æ–¹å‘
         for(int j=1; j<=11; ++j)
             if(tmp[i][j]==flag&&tmp[i][j+1]==flag&&tmp[i][j+2]==flag&&tmp[i][j+3]==flag&&tmp[i][j+4]==flag)
                 sum1++;
-    for(int i=1; i<=11; ++i) //´¹Ö±·½Ïò
+    for(int i=1; i<=11; ++i) //å‚ç›´æ–¹å‘
         for(int j=1; j<=15; ++j)
             if(tmp[i][j]==flag&&tmp[i+1][j]==flag&&tmp[i+2][j]==flag&&tmp[i+3][j]==flag&&tmp[i+4][j]==flag)
                 sum1++;
-    for(int i=1; i<=11; ++i) //ÕıĞ±·½Ïò
+    for(int i=1; i<=11; ++i) //æ­£æ–œæ–¹å‘
         for(int j=1; j<=11; ++j)
             if(tmp[i][j]==flag&&tmp[i+1][j+1]==flag&&tmp[i+2][j+2]==flag&&tmp[i+3][j+3]==flag&&tmp[i+4][j+4]==flag)
                 sum1++;
-    for(int i=1; i<=11; ++i) //·´Ğ±·½Ïò
+    for(int i=1; i<=11; ++i) //åæ–œæ–¹å‘
         for(int j=15; j>=5; --j)
             if(tmp[i][j]==flag&&tmp[i+1][j-1]==flag&&tmp[i+2][j-2]==flag&&tmp[i+3][j-3]==flag&&tmp[i+4][j-4]==flag)
                 sum1++;
@@ -190,19 +190,19 @@ int h(int flag,int A[16][16])
             if(tmp[i][j]==8)
                 tmp[i][j]=fflag;
     int sum0=0;
-    for(int i=1; i<=15; ++i) //Ë®Æ½·½Ïò
+    for(int i=1; i<=15; ++i) //æ°´å¹³æ–¹å‘
         for(int j=1; j<=11; ++j)
             if(tmp[i][j]==fflag&&tmp[i][j+1]==fflag&&tmp[i][j+2]==fflag&&tmp[i][j+3]==fflag&&tmp[i][j+4]==fflag)
                 sum0++;
-    for(int i=1; i<=11; ++i) //´¹Ö±·½Ïò
+    for(int i=1; i<=11; ++i) //å‚ç›´æ–¹å‘
         for(int j=1; j<=15; ++j)
             if(tmp[i][j]==fflag&&tmp[i+1][j]==fflag&&tmp[i+2][j]==fflag&&tmp[i+3][j]==fflag&&tmp[i+4][j]==fflag)
                 sum0++;
-    for(int i=1; i<=11; ++i) //ÕıĞ±·½Ïò
+    for(int i=1; i<=11; ++i) //æ­£æ–œæ–¹å‘
         for(int j=1; j<=11; ++j)
             if(tmp[i][j]==fflag&&tmp[i+1][j+1]==fflag&&tmp[i+2][j+2]==fflag&&tmp[i+3][j+3]==fflag&&tmp[i+4][j+4]==fflag)
                 sum0++;
-    for(int i=1; i<=11; ++i) //·´Ğ±·½Ïò
+    for(int i=1; i<=11; ++i) //åæ–œæ–¹å‘
         for(int j=15; j>=5; --j)
             if(tmp[i][j]==fflag&&tmp[i+1][j-1]==fflag&&tmp[i+2][j-2]==fflag&&tmp[i+3][j-3]==fflag&&tmp[i+4][j-4]==fflag)
                 sum0++;
@@ -216,7 +216,7 @@ int move1(int A[16][16])
             if(A[i][j]==8)
             {
                 mcopy(tmp,A);
-                tmp[i][j]=0; //¶ÔÊÖÏÂ
+                tmp[i][j]=0; //å¯¹æ‰‹ä¸‹
                 if(check(0,tmp))
                     num=-INF;
                 else
@@ -234,7 +234,7 @@ int move0(int A[16][16])
             if(A[i][j]==8)
             {
                 mcopy(tmp,A);
-                tmp[i][j]=1; //¶ÔÊÖÏÂ
+                tmp[i][j]=1; //å¯¹æ‰‹ä¸‹
                 if(check(1,tmp))
                     num=-INF;
                 else
@@ -252,7 +252,7 @@ void solve1(Node &node)
             if(node.A[i][j]==8)
             {
                 mcopy(tmp,node.A);
-                tmp[i][j]=1; //×Ô¼ºÏÂ
+                tmp[i][j]=1; //è‡ªå·±ä¸‹
                 if(check(1,tmp))
                     f=INF;
                 else
@@ -285,7 +285,7 @@ void solve0(Node &node)
             if(node.A[i][j]==8)
             {
                 mcopy(tmp,node.A);
-                tmp[i][j]=0; //×Ô¼ºÏÂ
+                tmp[i][j]=0; //è‡ªå·±ä¸‹
                 if(check(0,tmp))
                     f=INF;
                 else
@@ -346,7 +346,7 @@ int main()
     for(int i=1; i<=15; ++i)
         for(int j=1; j<=15; ++j)
             node.A[i][j]=8;
-    cout<<"ºÚÆå(1)or°×Æå(0)?";
+    cout<<"é»‘æ£‹(1)orç™½æ£‹(0)?";
     cin>>myturn;
     while(1)
     {
@@ -354,7 +354,7 @@ int main()
         {
             if(flag==myturn)
             {
-                if(first)//ÈË¹¤ÖÇÄÜµÚÒ»´Î²»»á×ßÖĞ¼ä£¬ÒòÎªÖĞ¼ä·¶Î§µÄÆÀ¼ÛÏàÍ¬£¬ËùÒÔµÚÒ»²½ÒªÇ¿ÖÆÏÂÔÚÖĞ¼ä
+                if(first)//äººå·¥æ™ºèƒ½ç¬¬ä¸€æ¬¡ä¸ä¼šèµ°ä¸­é—´ï¼Œå› ä¸ºä¸­é—´èŒƒå›´çš„è¯„ä»·ç›¸åŒï¼Œæ‰€ä»¥ç¬¬ä¸€æ­¥è¦å¼ºåˆ¶ä¸‹åœ¨ä¸­é—´
                 {
                     node.A[8][8]=1;
                     first=0;
@@ -364,7 +364,7 @@ int main()
             }
             else
             {
-                cout<<"¶Ô·½µÄÑ¡ÔñÊÇ?";
+                cout<<"å¯¹æ–¹çš„é€‰æ‹©æ˜¯?";
                 cin>>i>>j;
                 node.A[i][j]=1;
             }
@@ -385,7 +385,7 @@ int main()
             }
             else
             {
-                cout<<"¶Ô·½µÄÑ¡ÔñÊÇ?";
+                cout<<"å¯¹æ–¹çš„é€‰æ‹©æ˜¯?";
 
                 cin>>i>>j;
                 node.A[i][j]=0;
